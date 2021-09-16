@@ -59,6 +59,8 @@
     <Compile Include="Model\Rover.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sade Hali\Case.cs" />
+    <Compile Include="Sade Hali\Coordinate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

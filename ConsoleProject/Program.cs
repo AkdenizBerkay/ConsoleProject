@@ -2,6 +2,7 @@
 using ConsoleProject.Helper;
 using ConsoleProject.Manager;
 using ConsoleProject.Model;
+using ConsoleProject.Sade_Hali;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,35 @@ namespace ConsoleProject
             var commands = Console.ReadLine();
             var result = Utilities.ApplyCommands(mars, rover, commands);
             Console.WriteLine(result);
+
+            #region Sade Hali
+            Coordinate coordiante = new Coordinate();
+            coordiante.x = 1;
+            coordiante.y = 2;
+            var w = "N";
+
+            string komutlar = "LMLMLMLMM";
+
+            foreach (char komut in komutlar.ToList())
+            {
+                if (komut.Equals('L'))
+                {
+                    w = Case.Left(w);
+                }
+                if (komut.Equals('R'))
+                {
+                    w = Case.Right(w);
+                }
+                if (komut.Equals('M'))
+                {
+                    coordiante = Case.Move(w, coordiante);
+                }
+            }
+
+            Console.WriteLine(coordiante.x + " " + coordiante.y + " " + w);
+
+            #endregion
+
             Console.ReadLine();
         }
 
